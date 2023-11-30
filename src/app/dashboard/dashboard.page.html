@@ -1,13 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>dashboard</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-item (click)="logout()">
-    <ion-icon slot="start" ios="exit-outline" md="exit-sharp"></ion-icon>
-    <ion-label>Logout</ion-label>
-  </ion-item>
-  <hr>
-  <div> Selamat datang {{ nama }}</div>
+  <hr />
+  <div style="margin: auto; width: 80%">
+    <h1 style="text-align: center">Selamat datang {{ nama }}</h1>
+  </div>
+  <div
+    style="
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    "
+  >
+    <ion-button (click)="goToPelanggaran()"
+      >Menuju Halaman Pelanggaran</ion-button
+    >
+    <ion-button (click)="logout()" color="danger" >
+      <ion-icon slot="start"   ios="exit-outline" md="exit-sharp"></ion-icon>
+      Log Out
+    </ion-button>
+  </div>
 </ion-content>

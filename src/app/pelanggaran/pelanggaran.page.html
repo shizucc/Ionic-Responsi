@@ -5,29 +5,24 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">mahasiswa</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-card *ngFor="let item of dataPelanggaran">
-    <ion-item>
-      <ion-label>
-        {{item.nama}}
-        <p>Lokasi : {{item.lokasi}}</p>
-      </ion-label>
-      <ion-button expand="block" (click)="open_modal_edit(true,item.id)"
-        >Edit</ion-button
-      >
-      <ion-button color="danger" slot="end" (click)="hapusPelanggaran(item.id)">Hapus</ion-button>
-    </ion-item>
+  <div style="margin-right: 20%; margin-left: 20%; margin-top: 3%;">
+
+    <ion-button (click)="open_modal_tambah(true)" fill="outline" expand="block">Tambah Pelanggaran</ion-button>
+  </div>
+
+  <ion-card  *ngFor="let item of dataPelanggaran" color="light">
+    <ion-card-header>
+      <ion-card-title style="font-weight: 700;">{{item.nama}}</ion-card-title>
+      <ion-card-subtitle>Lokasi : {{item.lokasi}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-button (click)="open_modal_edit(true,item.id)" fill="clear" style="color: rgb(214, 214, 34); font-weight: 700;">Edit</ion-button>
+    <ion-button (click)="hapusPelanggaran(item.id)" fill="clear" style="color: rgb(255, 0, 0); font-weight: 700;">Hapus</ion-button>
+    
+    
   </ion-card>
 
-  <ion-card>
-    <ion-button (click)="open_modal_tambah(true)" expand="block"
-      >Tambah Pelanggaran</ion-button
-    >
-  </ion-card>
+  
   <!-- ini untuk modal tambah -->
   <ion-modal [isOpen]="modal_tambah">
     <ng-template>
@@ -41,36 +36,19 @@
       </ion-header>
       <ion-content class="ion-padding">
         <ion-item>
-          <ion-input
-            label="Nama Pelanggaran"
-            labelPlacement="floating"
-            required
-            [(ngModel)]="nama"
-            placeholder="Masukkan Nama Pelanggaran"
-            type="text"
-          >
+          <ion-input label="Nama Pelanggaran" labelPlacement="floating" required [(ngModel)]="nama"
+            placeholder="Masukkan Nama Pelanggaran" type="text">
           </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input
-            label="Lokasi Pelanggaran"
-            labelPlacement="floating"
-            required
-            [(ngModel)]="lokasi"
-            placeholder="Masukkan Lokasi"
-            type="text"
-          >
+          <ion-input label="Lokasi Pelanggaran" labelPlacement="floating" required [(ngModel)]="lokasi"
+            placeholder="Masukkan Lokasi" type="text">
           </ion-input>
         </ion-item>
         <ion-row>
-          <ion-col>
-            <ion-button
-              type="button"
-              (click)="tambahPelanggaran()"
-              color="primary"
-              shape="full"
-              expand="block"
-              >Tambah Pelanggaran
+          <ion-col style="margin-inline: 20%; margin-top: 3%;">
+            <ion-button type="button" (click)="tambahPelanggaran()" color="primary" fill="outline"  >Tambah
+              Pelanggaran
             </ion-button>
           </ion-col>
         </ion-row>
@@ -91,37 +69,19 @@
       </ion-header>
       <ion-content class="ion-padding">
         <ion-item>
-          <ion-input
-            label="Nama Pelanggaarn"
-            labelPlacement="floating"
-            required
-            [(ngModel)]="nama"
-            placeholder="Masukkan Nama Pelanggaarn"
-            type="text"
-          >
+          <ion-input label="Nama Pelanggaarn" labelPlacement="floating" required [(ngModel)]="nama"
+            placeholder="Masukkan Nama Pelanggaarn" type="text">
           </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input
-            label="Lokasi Pelanggaarn"
-            labelPlacement="floating"
-            required
-            [(ngModel)]="lokasi"
-            placeholder="Masukkan LokasiPelanggaarn"
-            type="text"
-          >
+          <ion-input label="Lokasi Pelanggaarn" labelPlacement="floating" required [(ngModel)]="lokasi"
+            placeholder="Masukkan LokasiPelanggaarn" type="text">
           </ion-input>
         </ion-item>
         <ion-input required [(ngModel)]="id" type="hidden"> </ion-input>
         <ion-row>
           <ion-col>
-            <ion-button
-              type="button"
-              (click)="editPelanggaran()"
-              color="primary"
-              shape="full"
-              expand="block"
-              >Edit Mahasiswa
+            <ion-button type="button" (click)="editPelanggaran()" color="warning" fill="outline"  >Edit
             </ion-button>
           </ion-col>
         </ion-row>

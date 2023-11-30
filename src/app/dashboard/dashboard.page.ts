@@ -51,4 +51,8 @@ export class DashboardPage implements OnInit {
       res.present();
     });
   }
+
+  goToPelanggaran() {
+    this.router.navigate(['/pelanggaran']);
+  }
 }
