@@ -27,7 +27,11 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },  {
+    path: 'pelanggaran',
+    loadChildren: () => import('./pelanggaran/pelanggaran.module').then( m => m.PelanggaranPageModule)
   },
+
 ];
 @NgModule({
   imports: [
