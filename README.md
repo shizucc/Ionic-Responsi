@@ -1,7 +1,7 @@
 ### Ionic-Responsi
 
 # Halaman Login
-![localhost_8100_login(iPhone XR)](https://github.com/shizucc/Ionic-Responsi/assets/100017161/2d36375b-da0c-4ebb-8e04-02aa0eb11fb6) {:width="300px"}
+![localhost_8100_login(iPhone XR)](https://github.com/shizucc/Ionic-Responsi/assets/100017161/2d36375b-da0c-4ebb-8e04-02aa0eb11fb6) {width="300px"}
 
 # Halaman Dashboard
 ![localhost_8100_pelanggaran(iPhone XR) (6)](https://github.com/shizucc/Ionic-Responsi/assets/100017161/1d528096-2346-4577-a171-4aac0e214d74)
