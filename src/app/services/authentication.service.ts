@@ -17,7 +17,7 @@ export class AuthenticationService {
     return localStorage.getItem(TOKEN_KEY);
   }
   apiURL() {
-    return "https://api-auth.dalhaqq.xyz/";
+    return "http://localhost:8080/ionic-responsi-api/";
   }
   logout() {
     localStorage.clear();

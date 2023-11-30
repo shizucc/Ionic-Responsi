@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
   }
   login() {
     if (this.username != null && this.password != null) {
-      let url = this.authService.apiURL() + "proses_login.php";
+      let url = this.authService.apiURL() + "auth.php";
       Http.request({
         method: "POST",
         url: url,
@@ -32,7 +32,7 @@ export class LoginPage implements OnInit {
         },
       }).then((data) => {
         console.log(data);
-        if (data['data']['status_login'] == 'berhasil') {
+        if (data['data']['status'] == 'success') {
           this.username = '';
           this.password = '';
           localStorage.setItem(TOKEN_KEY, data['data']['token']);
